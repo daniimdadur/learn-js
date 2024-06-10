@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>destructuring-array</title>
+</head>
+<body>
+
+<script>
+    {
+        const names = ["Dani","Imdadur", "Rohman", "Sabilla", "Unyil", "Joko"];
+        const [firstName, middleName, lastName, ...others] = names;
+
+        console.info(firstName);
+        console.info(middleName);
+        console.info(lastName);
+        console.info(others);
+    }
+    {
+        const person = {
+            firstName: "Dani",
+            lastName: "Imdadur",
+            address: {
+                street: "Pamarican",
+                city: "Ciamis",
+                country: "Indonesia"
+            },
+            hobby: "Codding",
+            channel: "Dev Anak Adam"
+        };
+
+        let {firstName, lastName, address: {street, city, country}, ...others} = person;
+        console.info(firstName);
+        console.info(lastName);
+        console.info(street);
+        console.info(city);
+        console.info(country);
+        console.info(others);
+    }
+    {
+        function displayPerson({firstName, middleName, lastName}) {
+            console.info(firstName);
+            console.info(middleName);
+            console.info(lastName);
+        }
+
+            const person = {
+                firstName: "Dani",
+                middleName: "Imdadur",
+                lastName: "Rohman"
+            };
+
+            displayPerson(person);
+    }
+    {
+        function sum([firstName, lastName]){
+            return firstName + lastName;
+        }
+        console.info(sum([1, 10]));
+        console.info(sum([10, 10]));
+    }
+
+</script>
+
+</body>
+</html>

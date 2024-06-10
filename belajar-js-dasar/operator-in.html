@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>operator</title>
+</head>
+<body>
+<script>
+
+    const person = {
+        firstName: "Dani",
+        lastName: "Imdadur"
+    };
+
+    if ("firstName" in person){
+        alert(`Hello ${person.firstName}`);
+    } else {
+        alert(`Hello`);
+    }
+
+    const student = {
+        firstName: "Dani",
+        middleName: undefined,
+        lastName: "Imdadur"
+    };
+
+    if ("middleName" in student){
+        alert(`Hello ${student.middleName}`);
+    } else {
+        alert(`Hello`);
+    }
+
+</script>
+</body>
+</html>
